@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://unpkg.com/@ionic/core@latest/dist/ionic.js"></script>
+    <link href="https://unpkg.com/@ionic/core@latest/css/ionic.bundle.css" rel="stylesheet">
+    <title>Budget Planer | Ionic</title>
+</head>
+<body>
+    <ion-app>
+        <ion-header>
+            <ion-toolbar color="primary">
+                <ion-title>Budget Planer</ion-title>
+            </ion-toolbar>
+        </ion-header>
+        <ion-content>
+            <ion-grid>
+                <ion-row>
+                    <ion-col size-md="6" offset-md="3">
+                        <ion-card>
+                            <ion-card-header>
+                                <ion-card-title>Add My Expenses</ion-card-title>
+                            </ion-card-header>
+                            <ion-card-content>
+                                <ion-item>
+                                    <ion-label position="floating">Expense Resone</ion-label>
+                                    <ion-input type="text" id="input-resone"></ion-input>
+                                </ion-item>
+                                <ion-item>
+                                    <ion-label position="floating">Expense Amount</ion-label>
+                                    <ion-input type="number" id="input-amount"></ion-input>
+                                </ion-item>
+                                <div margin>
+                                    <ion-button fill="outline" color="danger" id="btn-clear">
+                                        <ion-icon slot="start" name="close" ></ion-icon>CANCLE
+                                    </ion-button>
+                        
+                                    <ion-button  color="primary" id="btn-add">
+                                        <ion-icon slot="start" name="add-circle-outline"></ion-icon> ADD EXPENCE
+                                    </ion-button>
+                                </div>
+                            </ion-card-content>
+                        </ion-card>
+                    </ion-col>
+                </ion-row>
+
+                <ion-row>
+                    <ion-col size-md="6" offset-md="3">
+                        <ion-item>
+                            <p> Total Expance is :  <span id="tatal-expance"> </span> </p>
+                        </ion-item>
+                    </ion-col>
+                </ion-row>
+
+                <ion-row>
+                    <ion-col size-md="6" offset-md="3">
+                        <ion-list id="enter-elements"></ion-list>
+                    </ion-col>
+                </ion-row>
+
+            </ion-grid>
+        </ion-content>
+
+        <ion-alert-controller></ion-alert-controller>
+    </ion-app>
+
+    <script src="app.js"></script>
+</body>
+</html>
